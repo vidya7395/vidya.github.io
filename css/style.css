@@ -1,0 +1,256 @@
+:root {
+    --primary: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --secondary: hsl(303, 10%, 53%);
+    --secondary-light: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 15px;
+    font-family: Spartan;
+    height: 100%;
+}
+
+body {
+    /* background: url('../images/bg-pattern-top-desktop.svg') no-repeat; */
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+
+
+}
+
+.bg-pattern-top-desktop,
+.bg-pattern-bottom-mobile {
+    position: absolute;
+    max-width: 100%;
+}
+
+.bg-pattern-top-desktop {
+    left: 0;
+    top: 0
+}
+
+.bg-pattern-bottom-mobile {
+    right: 0;
+    bottom: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.title {
+    margin: 0;
+    font-size: 45px;
+    color: var(--primary);
+}
+
+p {
+    color: var(--secondary);
+}
+
+.rating-container {
+    background-color: var(--secondary-light);
+    border-radius: 5px;
+    padding: 20px 30px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.buyer-container {
+    padding: 0 0 30px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buyer-container .buyer {
+    background-color: var(--primary);
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: var(--white);
+    flex: 1 0 33.33%;
+    max-width: 33.33%;
+    margin-right: 30px;
+    align-self: flex-start;
+}
+
+.buyer:nth-child(2) {
+    margin-top: 30px;
+}
+
+.buyer:nth-child(3) {
+    margin-top: 60px;
+}
+
+.buyer-container .buyer .buyer-details {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.buyer-container .buyer .buyer-details img {
+    border-radius: 50%;
+    width: 44px;
+}
+
+.buyer-details .name {
+    font-weight: 500;
+    margin-left: 30px;
+
+}
+
+.buyer-details .verification {
+    font-weight: 400;
+    color: var(--soft-pink);
+    margin-top: 5px;
+}
+
+.buyer-container p {
+    color: var(--white);
+    line-height: 23px;
+}
+
+.header-container {
+    padding: 60px 30px;
+    display: flex;
+}
+
+.header-container p {
+    line-height: 23px;
+    margin-top: 20px;
+}
+
+.rating-container {
+    white-space: nowrap;
+}
+
+.rating-container:nth-child(1) {
+    margin-right: 70px;
+
+}
+
+.rating-container:nth-child(2) {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.rating-container:nth-child(3) {
+    margin-left: 70px;
+}
+
+.rating-container,
+.star-container {
+    display: flex;
+    align-items: center;
+}
+
+.star-container img {
+    margin-right: 10px;
+}
+
+.header-title {
+    margin-right: 68px;
+}
+
+.header-title,
+.header-rating {
+    flex: 1 0 50%;
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        padding: 60px 30px;
+        max-width: 100%;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .title {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .rating-container:nth-child(1),
+    .rating-container:nth-child(2),
+    .rating-container:nth-child(3) {
+
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .header-title {
+        margin-right: 0;
+    }
+
+    .title,
+    p {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .rating-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 10px;
+
+    }
+
+    .star-container {
+        margin-bottom: 10px;
+    }
+
+    .buyer-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        padding: 0;
+
+    }
+
+    .buyer-container .buyer {
+        flex: 1 0 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .buyer:nth-child(1),
+    .buyer:nth-child(2),
+    .buyer:nth-child(3) {
+        margin-top: 0
+    }
+
+    .buyer-container p {
+        text-align: left;
+
+    }
+}
